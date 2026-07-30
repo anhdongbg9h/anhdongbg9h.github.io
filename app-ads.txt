@@ -1,5 +1,5 @@
-OWNERDOMAIN=[anhdongbg9h.github.io]
-ironsrc.com, [526527], Direct
+OWNERDOMAIN=anhdongbg9h.github.io
+ironsrc.com, 526527, Direct
 
 blueseasx.com, 203625, RESELLER
 rubiconproject.com, 26132, RESELLER, 0bfd66d529a55807
