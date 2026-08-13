@@ -224,8 +224,6 @@ pubmatic.com, 166335, RESELLER, 5d62403b186f2ace
 vungle.com, 6a3f7c1dede581a04246c015, DIRECT, c107d686becd2d77
 33across.com,001Pg0000197KcKIAU,RESELLER,bbea06d9c4d2853c
 Contextweb.com,562852,RESELLER,89ff185a4c4e857c
-Media.net,8CU12AQ1Y,RESELLER
-Media.net,8CU9B72O6,RESELLER
 adagio.io,1522,RESELLER
 adform.com,2671,RESELLER
 adform.com,2742,RESELLER
@@ -339,7 +337,6 @@ media.net,8CU76268D,RESELLER
 media.net,8CUI89K0D,RESELLER
 media.net,8CUN37DCC,RESELLER
 media.net,8CUP1N1F2,RESELLER
-media.net,8CUSC3UJ7,RESELLER
 meitu.com,755,RESELLER
 mintegral.com,10005,RESELLER
 mintegral.com,10030,RESELLER
@@ -466,13 +463,11 @@ sharethrough.com,4762,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,4811,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,5026,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,6qlnf8SY,RESELLER,d53b998a7bd4ecd2
-sharethrough.com,Bc6D1WHS,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,DQQogebZ,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,NIRSC9f2,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,UbYLkrys,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,XeKuhSkz,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,ZqrIAHsE,RESELLER,d53b998a7bd4ecd2
-sharethrough.com,bXzzb1bR,RESELLER,d53b998a7bd4ecd2
 sharethrough.com,wRgOcZeV,RESELLER,d53b998a7bd4ecd2
 showheroes.com,6031,RESELLER
 showheroes.com,6037,RESELLER
