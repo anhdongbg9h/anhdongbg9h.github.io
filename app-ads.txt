@@ -440,6 +440,7 @@ media.net,8CUI89K0D,RESELLER
 media.net,8CUN37DCC,RESELLER
 media.net,8CUP1N1F2,RESELLER
 media.net,8CUSC3UJ7,RESELLER
+media.net,8cusc3uj7,RESELLER
 meitu.com,755,RESELLER
 mintegral.com,10005,RESELLER
 mintegral.com,10030,RESELLER
