@@ -2,40 +2,576 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GrowUpTeam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrowUpTeam — Mobile Games & Sound Apps Studio</title>
+  <meta name="description" content="GrowUpTeam crafts fun, creative, and accessible casual games and joyful sound experiences. Creators of Focus Sounds, Jewel Clumber, Wordoku, StoryTap, and Real Sounds." />
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="GrowUpTeam — Mobile Games & Sound Experiences" />
+  <meta property="og:description" content="Creating joy, growing strong – one game at a time. Explore our mobile games and relaxing audio apps on Google Play." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anhdongbg9h.github.io/" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #6366f1;
+      --primary-glow: rgba(99, 102, 241, 0.35);
+      --accent: #ec4899;
+      --accent-glow: rgba(236, 72, 153, 0.35);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.35);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    h1 {
-      color: #2a7ae2;
-    }
-    p {
-      font-size: 18px;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 20%, rgba(236, 72, 153, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 45%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .brand-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-logo span {
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 65px 0 45px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #a5b4fc;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, #818cf8 0%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p.tagline {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .hero p.desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 32px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: #fff;
+      box-shadow: 0 4px 18px var(--primary-glow);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--primary-glow);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    /* Featured App Banner */
+    .featured-box {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(236, 72, 153, 0.08));
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 50px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .featured-badge {
+      background: #4338ca;
+      color: #c7d2fe;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    /* Grid of Apps */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .app-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(10px);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .app-card:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .app-header {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .icon-rain { background: linear-gradient(135deg, #0284c7, #0369a1); }
+    .icon-gem { background: linear-gradient(135deg, #7c3aed, #4338ca); }
+    .icon-word { background: linear-gradient(135deg, #ea580c, #c2410c); }
+    .icon-tap { background: linear-gradient(135deg, #059669, #047857); }
+    .icon-prank { background: linear-gradient(135deg, #db2777, #9d174d); }
+
+    .app-title-group h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .tag-container {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .app-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .app-btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .app-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      border-top: 1px solid var(--card-border);
+      padding: 36px 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-main);
+    }
+
+    @media (max-width: 640px) {
+      .featured-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-links {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <h1>GrowUpTeam</h1>
-    <p>We are a mobile game development team focused on casual and puzzle genres.</p>
-    <p>We use Unity to design, develop, and publish fun, creative, and accessible games for everyone.</p>
-    <p>Contact us at: <strong>growupteamvn@gmail.com</strong></p>
-    <p>Check out our games on Google Play:
-    <a href="https://play.google.com/store/apps/developer?id=GrowUpTeam" target="_blank">
-      GrowUpTeam on Google Play
-    </a>
-  </p>
+    <!-- Header -->
+    <header>
+      <div class="brand-logo">GrowUp<span>Team</span></div>
+      <nav>
+        <a href="#featured">Featured</a>
+        <a href="#games">Games & Apps</a>
+        <a href="mailto:growupteamvn@gmail.com">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="badge">🚀 Indie Game & App Studio</div>
+      <h1>Creating Joy, Growing Strong <br/><span class="gradient-text">One Game at a Time</span></h1>
+      <p class="tagline">Fun, creative, and accessible mobile experiences for everyone.</p>
+      <p class="desc">Enjoy quick casual puzzles, satisfying ASMR visual loops, and ambient sound applications crafted with passion.</p>
+      
+      <div class="btn-group">
+        <a href="https://play.google.com/store/apps/dev?id=4862515294264189884" target="_blank" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.22 2.22 0 0 1-.61-.92L3 2.734c0-.34.12-.66.609-.92zm11.238 11.238l2.585 2.586-12.8 7.377 10.215-9.963zm0-2.104L4.632 0.985l12.8 7.377-2.585 2.586zm1.464 1.464l4.248 2.446c.92.53.92 1.396 0 1.926l-4.248 2.446-2.614-2.614 2.614-2.604z"/></svg>
+          Google Play Store Profile
+        </a>
+        <a href="mailto:growupteamvn@gmail.com" class="btn btn-secondary">
+          ✉️ growupteamvn@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured App Highlight -->
+    <section id="featured" class="featured-box">
+      <div class="app-icon icon-rain" style="width: 80px; height: 80px; font-size: 2.2rem;">🌧️</div>
+      <div style="flex-grow: 1;">
+        <span class="featured-badge">Featured App • 500+ Downloads</span>
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.45rem; margin-bottom: 4px;">Focus Sounds: Rain & Study</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px;">
+          Ambient rain sounds, white noise, and relaxing Lofi music with built-in Pomodoro timer to help you study, relax, or sleep deeply.
+        </p>
+        <a href="https://play.google.com/store/apps/details?id=com.growupteam.focussounds.pomodorotimer" target="_blank" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">
+          Get it on Google Play →
+        </a>
+      </div>
+    </section>
+
+    <!-- Complete Products Grid -->
+    <section id="games">
+      <div class="section-header">
+        <h2 class="section-title">🎮 Our Games & Apps</h2>
+      </div>
+
+      <div class="apps-grid">
+        
+        <!-- App 1: Jewel Clumber -->
+        <div class="app-card">
+          <div>
+            <div class="app-header">
+              <div class="app-icon icon-gem">💎</div>
+              <div class="app-title-group">
+                <h3>Jewel Clumber Pixel Art</h3>
+                <div class="tag-container">
+                  <span class="tag">Puzzle</span>
+                  <span class="tag">ASMR</span>
+                  <span class="tag">Pixel Art</span>
+                </div>
+              </div>
+            </div>
+            <p class="app-desc">
+              Crumble 3D jewel blocks and watch sparkling gems slide down conveyor belts to reveal stunning pixel art puzzles.
+            </p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.growupteam.jewel.clumber" target="_blank" class="app-btn">
+            View on Google Play ↗
+          </a>
+        </div>
+
+        <!-- App 2: Wordoku -->
+        <div class="app-card">
+          <div>
+            <div class="app-header">
+              <div class="app-icon icon-word">🔠</div>
+              <div class="app-title-group">
+                <h3>Wordoku: Word & Logic</h3>
+                <div class="tag-container">
+                  <span class="tag">Word Puzzle</span>
+                  <span class="tag">Logic</span>
+                </div>
+              </div>
+            </div>
+            <p class="app-desc">
+              A smart blend of classic grid logic and word guessing. Challenge your vocabulary and deductive reasoning daily.
+            </p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.growupteam.wordoku.semantic" target="_blank" class="app-btn">
+            View on Google Play ↗
+          </a>
+        </div>
+
+        <!-- App 3: StoryTap -->
+        <div class="app-card">
+          <div>
+            <div class="app-header">
+              <div class="app-icon icon-tap">👆</div>
+              <div class="app-title-group">
+                <h3>StoryTap: Tap Away Puzzle</h3>
+                <div class="tag-container">
+                  <span class="tag">Tap Away</span>
+                  <span class="tag">Casual</span>
+                </div>
+              </div>
+            </div>
+            <p class="app-desc">
+              Tap the right sequence, clear obstacles, and unlock humorous visual stories in a satisfying 3D tap-away puzzle.
+            </p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.growupteam.storytap.solvethesequence" target="_blank" class="app-btn">
+            View on Google Play ↗
+          </a>
+        </div>
+
+        <!-- App 4: Real Sounds -->
+        <div class="app-card">
+          <div>
+            <div class="app-header">
+              <div class="app-icon icon-prank">🔊</div>
+              <div class="app-title-group">
+                <h3>Real Sounds: Prank Simulator</h3>
+                <div class="tag-container">
+                  <span class="tag">Entertainment</span>
+                  <span class="tag">Sounds</span>
+                </div>
+              </div>
+            </div>
+            <p class="app-desc">
+              High-quality soundboard with realistic sound effects, loop timers, and pranking tools for fun moments with friends.
+            </p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.growupteam.sounds.simulator" target="_blank" class="app-btn">
+            View on Google Play ↗
+          </a>
+        </div>
+
+        <!-- App 5: Focus Sounds -->
+        <div class="app-card">
+          <div>
+            <div class="app-header">
+              <div class="app-icon icon-rain">🎧</div>
+              <div class="app-title-group">
+                <h3>Focus Sounds: Rain & Study</h3>
+                <div class="tag-container">
+                  <span class="tag">Productivity</span>
+                  <span class="tag">Sleep & Relax</span>
+                </div>
+              </div>
+            </div>
+            <p class="app-desc">
+              Cozy rain atmospheres, white noise, and background timer optimized for deep work, study sessions, and restful sleep.
+            </p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.growupteam.focussounds.pomodorotimer" target="_blank" class="app-btn">
+            View on Google Play ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer with Compliance Links -->
+    <footer>
+      <div class="footer-content">
+        <div>
+          © 2026 <strong>GrowUpTeam</strong>. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="https://play.google.com/store/apps/dev?id=4862515294264189884" target="_blank">Google Play</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-service.html">Terms of Service</a>
+          <a href="/app-ads.txt">app-ads.txt</a>
+          <a href="mailto:growupteamvn@gmail.com">Contact</a>
+        </div>
+      </div>
+    </footer>
   </div>
+
 </body>
 </html>
