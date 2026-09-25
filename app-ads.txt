@@ -318,7 +318,7 @@ xandr.com, 16856, RESELLER
 bigo.sg, 7id17wm5ly, RESELLER
 openx.com, 561470659, RESELLER, 6a698e2ec38604c6
 
-
+#UnityAds
 kidoz.net, 14260, RESELLER, a109366414b7335e
 kidoz.net, 15467, RESELLER, a109366414b7335e
 lijit.com, 528770, RESELLER, fafdf38b16bf6b2b
@@ -473,8 +473,13 @@ smaato.com, 1100055750, RESELLER, 07bcf65f187117b4
 smartadserver.com, 5294, RESELLER, 060d053dcf45cbf3
 sharethrough.com, SniqCOMC, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, 5294, RESELLER, d53b998a7bd4ecd2
+bold-win.com, 1013, RESELLER, 71746737d0bab951
+my-cast.tv, 987033, RESELLER, 8c33fe1bd714ffd7
+adwmg.com, 159512, RESELLER, c9688a22012618e7
+appnexus.com, 17973, RESELLER, f5ab79cb980f11d1
 
 
+#Vungle
 vungle.com,6a3f7c1dede581a04246c015,DIRECT,c107d686becd2d77
 33across.com,001Pg0000197KcKIAU,RESELLER,bbea06d9c4d2853c
 contextweb.com,562852,RESELLER,89ff185a4c4e857c
@@ -868,7 +873,11 @@ tradplusad.com,cc37417e7e7108a3,RESELLER
 ushareit.com,LCc6b8b1c8aca38e6f,RESELLER
 verve.com,1007302,RESELLER,0c8f5958fc2d6282
 visiblemeasures.com,1090,RESELLER
+indexexchange.com,219174,RESELLER,50b1c356f2c5c8fc
+pubmatic.com,168363,RESELLER,5d62403b186f2ace
+pubmatic.com,168367,RESELLER,5d62403b186f2ace
 
+#Chartboost
 chartboost.com, 6a9d8ec5f43658d46cca1c6c, DIRECT
 loopme.com, 21844, DIRECT, 6c8d5f95897a5a3b
 inmobi.com, c1e6d3502da64ebaa3ad0e4a4be15f11, RESELLER, 83e75a7ae333ca9d
